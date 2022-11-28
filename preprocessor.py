@@ -19,7 +19,7 @@ def preprocess(data):
         final_date.append(dates[i] + str(time[i]))
     df = pd.DataFrame({'user_message': messages, 'date': final_date})
     # convert message_date type
-    df['date'] = pd.to_datetime(df['date'], format="%d/%m/%Y, %I:%M %p")
+    df['date'] = pd.to_datetime(df['date'], format="%m/%d/%y, %I:%M %p")
     users = []
     messages = []
 
